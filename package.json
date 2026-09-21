@@ -1,0 +1,15 @@
+{
+  "name": "dr-chantell-lab-2-server-to-server-communication",
+  "version": "1.0.0",
+  "description": "Lab 2: Server to Server Communication for The Daily Grind",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Dr. Chantell McDowell",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.12.2",
+    "express": "^5.1.0"
+  }
+}

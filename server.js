@@ -10,24 +10,17 @@ app.use(express.static("public"));
 // This route gets a random fun fact from another server.
 app.get("/api/fun-fact", async (req, res) => {
   try {
+    // I use Axios to make a GET request to the Useless Facts API.
     const response = await axios.get(
-      "https://uselessfacts.jsph.pl/api/v2/facts/random",
-      { timeout: 10000 }
+      "https://uselessfacts.jsph.pl/api/v2/facts/random"
     );
 
-    const factText = response?.data?.text || response?.data?.fact;
-
-    if (!factText) {
-      return res.status(502).json({
-        error: "Unexpected response from the upstream API",
-      });
-    }
-
-    // I only send the fact text that my client needs.
+    // I only send the fact text back to the client.
     res.json({
-      fact: factText,
+      fact: response.data.text,
     });
   } catch (error) {
+    // If something goes wrong, I send a simple error message.
     console.error("Error getting fun fact:", error.message);
 
     res.status(500).json({

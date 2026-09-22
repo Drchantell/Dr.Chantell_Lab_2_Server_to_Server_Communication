@@ -1,9 +1,10 @@
-Dr.Chantell's Lab 2: Server to Server Communication
-The Daily Grind Fun Fact API
+# Lab 2: Server to Server Communication
+
+## The Daily Grind Fun Fact API
 
 In this lab, I created a simple Express server for The Daily Grind coffee shop. My server communicates with an outside public API and gets a random fun fact.
 
-I used **Express** to create my server and **Axios** to make a GET request to the Useless Facts API. My main API route is:
+I used **Express** to create my server and **Axios** to make a GET request to the Useless Facts API. My API route is:
 
 ```text
 /api/fun-fact
@@ -31,13 +32,15 @@ I used `async/await` and a `try...catch` block so my server can handle errors. I
 }
 ```
 
-I also created a very simple webpage for The Daily Grind. I used my bold hot pink and black color style. The page has one button that asks my own Express server for a fun fact and displays it on the screen.
+I also created a simple webpage for The Daily Grind using my bold hot pink, black, and white color style. The page has one button that asks my Express server for a fun fact and displays it on the screen.
 
-What I Learned
+## What I Learned
 
-I learned that one server can communicate with another server. Axios makes the request from my Express server to the outside API. I also learned how to take a large response and return only the information my own client needs.
+I learned that one server can communicate with another server. Axios makes the request from my Express server to the outside API. I also learned how to take a larger response and return only the information my own client needs.
 
-I practiced using `async/await`, `try...catch`, Express routes, Axios, JSON responses, status codes, and a simple browser `fetch()` requestProject Files
+I practiced using `async/await`, `try...catch`, Express routes, Axios, JSON responses, status codes, and a simple browser `fetch()` request.
+
+## Project Files
 
 ```text
 Dr.Chantell_Lab_2_Server_to_Server_Communication
@@ -53,7 +56,8 @@ Dr.Chantell_Lab_2_Server_to_Server_Communication
 ├── START_HERE.md
 └── server.js
 ```
- How I Run My Project
+
+## How I Run My Project
 
 First, I open the folder in VS Code.
 
@@ -91,11 +95,6 @@ http://localhost:3000/api/fun-fact
 
 Each time I refresh that route, I should get another random fact.
 
-API Key
+## API Key
 
 This lab does not need an API key because the Useless Facts API is public. I do not need a `.env` file for this project.
-
-Author:
-
-Dr. Chantell McDowell
-Per Scholas Student
